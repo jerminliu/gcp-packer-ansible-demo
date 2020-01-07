@@ -9,6 +9,8 @@
 5. Authenticate Packer to GCP (see https://www.packer.io/docs/builders/googlecompute.html#authentication)
 
 ## Run Demo
-`cd debian-10`
-`packer build packer-template.json`
+```bash
+> cd debian-10
+> packer build packer-template.json
+```
 
