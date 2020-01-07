@@ -1,0 +1,15 @@
+---
+- hosts: default
+  become: true
+
+  tasks:
+
+  # Install Packages
+    - name: Update apt repositories cache
+      apt:
+        update_cache: yes
+
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: latest

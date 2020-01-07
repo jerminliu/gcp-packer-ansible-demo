@@ -1,0 +1,21 @@
+{
+  "builders": [
+    {
+        "type": "googlecompute",
+        "project_id": "sandbox-thmslprt",
+        "source_image_family": "debian-10",
+        "source_image": "debian-10-buster-v20191210",
+        "image_name": "custom-debian-10-v{{isotime \"20060102030405\"}}",
+        "image_family": "custom-debian-10",
+        "service_account_email": "gce-image-builder@sandbox-thmslprt.iam.gserviceaccount.com",
+        "ssh_username": "packer",
+        "zone": "europe-west1-b"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "./ansible-playbook.yaml"
+    }
+  ]
+}
